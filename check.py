@@ -93,7 +93,7 @@ for row in rows:
 try:
 
     with open(
-        "old.json",
+        "new_old.json",
         "r",
         encoding="utf-8"
     ) as f:
@@ -250,7 +250,7 @@ if changes:
 # =========================
 
 with open(
-    "old.json",
+    "new_old.json",
     "w",
     encoding="utf-8"
 ) as f:
