@@ -93,7 +93,7 @@ for row in rows:
 try:
 
     with open(
-        "new_old.json",
+        "new__old.json",
         "r",
         encoding="utf-8"
     ) as f:
@@ -104,6 +104,16 @@ except:
 
     old = current
 
+    requests.post(
+        f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
+        data={
+            "chat_id": CHAT_ID,
+            "text": (
+                "✅ Базовое состояние таблицы "
+                "загружено в память"
+            )
+        }
+    )
 # =========================
 # ПОИСК ИЗМЕНЕНИЙ
 # =========================
@@ -250,7 +260,7 @@ if changes:
 # =========================
 
 with open(
-    "new_old.json",
+    "new__old.json",
     "w",
     encoding="utf-8"
 ) as f:
