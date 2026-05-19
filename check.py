@@ -11,7 +11,7 @@ from googleapiclient.discovery import build
 BOT_TOKEN = "8615134295:AAGnodQA11PRpDgM4Tbij3z4aFaAKQX-ENg"
 CHAT_ID = "2040061132"
 
-SPREADSHEET_ID = "1wlUieP2Lxk5vrqbmv-3PCis82XP5P_zn6RBVr-MFunw"
+SPREADSHEET_ID = "1DuTuvBj7ST1q4ZlxEXEELNtrE-L1I0JB9Vl6JpksowY"
 
 SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets.readonly"
