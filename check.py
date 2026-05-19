@@ -37,7 +37,11 @@ result = service.spreadsheets().get(
     includeGridData=True
 ).execute()
 
-sheet = result["sheets"][0]
+TARGET_SHEET = "Весна(2026)"
+sheet = next(
+    s for s in result["sheets"]
+    if s["properties"]["title"] == TARGET_SHEET
+)
 
 rows = sheet["data"][0]["rowData"]
 
