@@ -37,10 +37,14 @@ result = service.spreadsheets().get(
     includeGridData=True
 ).execute()
 
-TARGET_SHEET = "Весна(2026)"
+POSSIBLE_SHEETS = [
+    "Весна(2026)",
+    "test"
+]
+
 sheet = next(
     s for s in result["sheets"]
-    if s["properties"]["title"] == TARGET_SHEET
+    if s["properties"]["title"] in POSSIBLE_SHEETS
 )
 
 rows = sheet["data"][0]["rowData"]
