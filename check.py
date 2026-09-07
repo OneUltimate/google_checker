@@ -38,7 +38,7 @@ result = service.spreadsheets().get(
 ).execute()
 
 POSSIBLE_SHEETS = [
-    "Весна(2026)",
+    "осень(2026)",
     "test"
 ]
 
